@@ -1,0 +1,14 @@
+<section>
+  <div class="col-md-4 offset-md-3">
+  <div class="box">
+  <form class="text-center border border-light p-5" [formGroup]="forgotForm">
+      <p class="h4 mb-4">Forgot Password</p>
+      <!-- Email -->
+      <p>*Please Send Your Email ID to Admin</p>
+      <input type="email" formControlName="email" class="form-control mb-4" placeholder="E-mail" required>
+      <button class="btn btn-info btn-block my-4" type="submit" (click)="sendEmail()">Send</button>
+      <div *ngIf="success">Email sent successfully</div>
+  </form>
+  </div>
+  </div>
+  </section>

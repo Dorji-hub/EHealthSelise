@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-8">
+<h2 class="has-text-centered">Appointment</h2>
+<br>
+<table class="table table-bordered">
+    <tr style="font-weight:bold;">
+        <td>Patient Name</td>
+        <td>Illness</td>
+        <td>Appointment Time</td>
+        <td>Appointment Date</td>
+        <td>File</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let data of Patient">
+        <td>{{getPatientName(data.user_id)}}</td>
+        <td>{{data.illness}}</td>
+        <td>{{data.appointment_time}}</td>
+        <td>{{data.appointment_date}}  </td>
+        <td>{{data.file}}</td>
+        <td><button is-primary class="btn btn-success" (click)="approveAppointment(data)">Approve</button></td>
+    </tr>
+</table>
+<br>
+<hr>
+</div>
+</div>
+</div>

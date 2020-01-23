@@ -1,0 +1,26 @@
+<h2>&nbsp;&nbsp;&nbsp;Patient</h2>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-8">
+<table class="table table-bordered">
+    <tr style="font-weight:bold">
+        <td>Name</td>
+        <td>Role</td>
+        <td>Email</td>
+        <td>Sex</td>
+        <td>Phone Number</td>
+        <td>Password</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let data of patient">
+        <td>{{data.firstname}} {{data.lastname}}</td>
+        <td>{{data.role}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.sex}}</td>
+        <td>{{data.phone_no}}</td>
+        <td>{{data.password}}</td>
+        <td><button class="btn btn-danger" (click)="delete(data)">Delete</button></td>   
+    </tr>
+</table>
+</div>
+</div>

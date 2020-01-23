@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-8">
+<h2 class="has-text-centered">
+    History</h2>
+<br>
+<table class="table table-bordered">
+    <tr style="font-weight:bold">
+        <td>Patient Name</td>
+        <td>Appointment Time</td>
+        <td>Illness</td>
+        <td>Appointment Date</td>
+        <td>Doctor Name</td>
+        <td>Status</td>
+    </tr>
+    <tr *ngFor="let data of Patient">
+        <td>{{getPatientName(data.user_id)}}</td>
+        <td>{{data.appointment_time}}</td>
+        <td>{{data.illness}}</td>
+        <td>{{data.appointment_date}} </td>
+        <td>{{getDoctorName(data.doctor_id)}}</td>
+        <td>{{data.access?'Approved':'Pending'}}</td>
+    </tr>
+</table>
+<br>
+<hr>
+</div>
+</div>
+</div>

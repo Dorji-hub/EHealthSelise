@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "firstname": "admin",
+      "lastname": "admin",
+      "username": "admin",
+      "email": "admin@yahoo.com",
+      "role": "admin",
+      "phone_no": "17977195",
+      "password": "admin123",
+      "access": true,
+      "id": 1
+    },
+    {
+      "username": "kinga",
+      "firstname": "kinga",
+      "lastname": "tshering",
+      "email": "kinga@hotmail.com",
+      "role": "patient",
+      "sex": "Male",
+      "phone_no": "1789089",
+      "password": "kinga123",
+      "access": true,
+      "id": 3
+    },
+    {
+      "username": "sonam",
+      "firstname": "sonam",
+      "lastname": "rinchen",
+      "email": "sonam@gmail.com",
+      "role": "doctor",
+      "sex": "Male",
+      "phone_no": "178890000",
+      "password": "sonam123",
+      "access": true,
+      "id": 4
+    },
+    {
+      "username": "sunbae",
+      "firstname": "dorji",
+      "lastname": "gyeltshen",
+      "email": "sunbae@gmail.com",
+      "role": "doctor",
+      "sex": "Male",
+      "phone_no": "17977115",
+      "password": "dorji123",
+      "access": true,
+      "id": 5
+    },
+    {
+      "username": "rinzin",
+      "firstname": "rinzin",
+      "lastname": "rinzin",
+      "email": "rinzin@gmail.com",
+      "role": "doctor",
+      "sex": "Male",
+      "phone_no": "12314567",
+      "password": "rinzin123",
+      "access": true,
+      "id": 6
+    }
+  ],
+  "appointment": [
+    {
+      "doctor_id": "",
+      "appointment_time": "",
+      "appointment_date": "",
+      "file": "",
+      "userid": "",
+      "access": "",
+      "id": 1
+    }
+  ]
+}

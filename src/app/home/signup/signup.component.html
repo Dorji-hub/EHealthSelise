@@ -1,0 +1,60 @@
+<section>
+<div class="col-md-5 offset-md-2"> 
+<form class="text-center border border-light p-5" [formGroup]="signupForm">
+    <p class="h4 mb-4">Sign up</p>
+  <div class="form-row mb-4">
+      <div class="col">
+        <!-- First name -->
+        <input type="text" formControlName="firstname" class="form-control" placeholder="First name" required>
+      </div>
+      <div class="col">
+          <!-- Last name -->
+        <input type="text" formControlName="lastname" class="form-control" placeholder="Last name"required>
+      </div>
+  </div>
+  
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- user name -->
+      <input type="text" formControlName="username" class="form-control" placeholder="Username" required>
+    </div>
+    <div class="col">
+      <input type="email" formControlName="email" class="form-control mb-4" placeholder="E-mail" required>
+    </div>
+  </div>
+
+<!-- E-mail -->
+  <div class="form-row mb-4">
+    <div class="col">
+      <!-- Role -->
+      <p style="font-weight: bold;">Designation:</p>
+      <select  formControlName="role" class="form-control" required>
+        <option>doctor</option>
+        <option>patient</option>
+      </select>
+  </div>
+     <!-- Sex -->
+  <div class="col">
+   <p style="font-weight: bold;"> Gender: </p>
+    <select  formControlName="sex" class="form-control" required>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+</div>
+  </div>
+  <!-- Phone number -->
+  <input type="contact" formControlName="phone_no" class="form-control" placeholder="Phone number"required><br>
+
+  <!-- Password -->
+  <input type="password" formControlName="password" class="form-control" placeholder="Password" required>
+
+  <!-- Sign up button -->
+  <button class="btn btn-info my-4 btn-block"(click)="registerUser()" [disabled]="signupForm.invalid">Sign in</button>
+  <div *ngIf="success" class=" has-text-centered has-text-success">
+    You have register successfully!
+    wait for approval!!!
+    </div>
+  <hr>
+</form>
+</div>
+</section>

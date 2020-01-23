@@ -1,0 +1,25 @@
+  <section>
+    <div class="col-md-4 offset-md-3">   
+    <form class="text-center border border-light p-5" [formGroup]="appointmentForm">
+    
+        <p class="h4 mb-4">Appointment</p>
+    
+        <input type="text" formControlName="illness" class="form-control mb-4" placeholder="Illness" required>
+        <input type="text" formControlName="appointment_time" class="form-control mb-4" placeholder="Appointment Time" required>
+        <input type="text" formControlName="appointment_date" class="form-control mb-4" placeholder="Appointment Date" required>
+        <label style="font-weight: bold;">Upload Previous Health Record</label>
+        <input type="file" formControlName="file" required><br>
+        <label style="font-weight: bold;">Doctor</label><br>
+    <select formControlName="doctor_id" >
+        <option *ngFor="let doctor of doctors"[value]="doctor.id">
+        {{doctor.firstname}}{{doctor.lastname}}
+        </option>
+    </select><br>
+        <!-- Approval button -->
+        <button class="btn btn-info btn-block my-4" type="submit" (click)="submitAppointment()" [disabled]="appointmentForm.invalid">Submit Appointment</button>
+        <p *ngIf="success" class="has-text-centered">
+            Appointment Sent!
+        </p>
+    </form>
+    </div>
+</section>
